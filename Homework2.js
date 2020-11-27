@@ -1,20 +1,24 @@
-let num = 7;
+function isPrime(num) {
+	var flag = "простое число";
 
-var flag = "простое число";
+	if (num == 0 || num == 1 || num > 1000) {
+	console.log('данные не верны');
+	}
+	else {
 
-if (num == 0 || num == 1 || num > 1000) {
-  console.log('данные не верны');
-}
-else {
+	for (let i = 2; i < num; i++) {
+		if (num % i == 0) {
+			flag = "cоставное число";
+			break; // выйдем из цикла
+		}
+	}
 
-for (let i = 2; i < num; i++) {
-	if (num % i == 0) {
-		flag = "cоставное число";
-		break; // выйдем из цикла
+	
+	console.log(flag);
+
 	}
 }
 
- 
-console.log(flag);
+isPrime(7);
 
-}
+// Сам код для определения, простое число или нет, написан верно, но условие задачи не выполнено польностью - код нужно оформить в виде функции. Выше исправила
